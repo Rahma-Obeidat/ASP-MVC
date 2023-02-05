@@ -62,9 +62,22 @@
             @Html.DisplayNameFor(model => model.Gender)
         </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Gender)
+        
+            @*@Html.DisplayFor(model => model.Gender)*@
+            @if (Model.Gender == true)
+            {<dd>
+        <span>Female</span>
         </dd>
+                
+            }
+            else
+            {<dd>
+                 <span>Male</span>
+        
+        </dd>
+                
+            }
+        
 
     </dl>
 </div>

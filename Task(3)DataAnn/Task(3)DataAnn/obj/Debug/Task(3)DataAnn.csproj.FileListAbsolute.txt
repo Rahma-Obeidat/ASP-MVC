@@ -77,3 +77,7 @@ C:\Task(3)DataAnn\Task(3)DataAnn\obj\Debug\Task(3)DataAnn.csproj.CoreCompileInpu
 C:\Task(3)DataAnn\Task(3)DataAnn\obj\Debug\Task(3)DataAnn.csproj.CopyComplete
 C:\Task(3)DataAnn\Task(3)DataAnn\obj\Debug\Task(3)DataAnn.dll
 C:\Task(3)DataAnn\Task(3)DataAnn\obj\Debug\Task(3)DataAnn.pdb
+C:\Task(3)DataAnn\Task(3)DataAnn\bin\EntityFramework.dll
+C:\Task(3)DataAnn\Task(3)DataAnn\bin\EntityFramework.SqlServer.dll
+C:\Task(3)DataAnn\Task(3)DataAnn\bin\EntityFramework.xml
+C:\Task(3)DataAnn\Task(3)DataAnn\bin\EntityFramework.SqlServer.xml

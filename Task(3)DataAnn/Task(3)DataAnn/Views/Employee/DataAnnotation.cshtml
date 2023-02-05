@@ -69,11 +69,15 @@
                     <div class="checkbox">
                         @*@Html.EditorFor(model => model.Gender)
         @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })*@
-                        @Html.DropDownListFor(model => model.Gender, new List<SelectListItem>
-{
-    new SelectListItem {Text = "Male", Value = "Male"},
-    new SelectListItem {Text = "Female", Value = "Female"},
-})
+                        @*@Html.DropDownListFor(model => model.Gender, new List<SelectListItem>
+        {
+            new SelectListItem {Text = "Male", Value = "Male"},
+            new SelectListItem {Text = "Female", Value = "Female"},
+        })*@
+                        
+                        @Html.RadioButton("Gender", "false", false, new { id = "male" }) Male
+
+                        @Html.RadioButton("Gender", "true", false, new { id = "female" }) Female
                     </div>
                 </div>
             </div>

@@ -9,6 +9,12 @@ namespace Task_3_DataAnn.Controllers
 {
     public class EmployeeController : Controller
     {
+
+        public ActionResult Index()
+        {
+
+            return View();
+        }
         // GET: Employee
         public ActionResult DataAnnotation()
         {
@@ -27,6 +33,20 @@ namespace Task_3_DataAnn.Controllers
                 return View("DataAnnotation");
 
             }
+
+           
+        }
+        public ActionResult EditData(Employee e)
+        {
+            if (ModelState.IsValid) {
+            
+            return View(e);
+            }
+            else {
+                return View();
+                    
+                    
+                    } 
         }
 
 

@@ -24,8 +24,8 @@ namespace Task_3_DataAnn.Models
 
 
         //ValidationExpression="^(07)[7-9]{1}[0-9]{7}$"
-        //[RegularExpression("((079)|(078)|(077)){1}[0-9]{7}" ,ErrorMessage = "Invalid Phone Number")]
-        public int Phone { get; set; }
+        [RegularExpression(@"^(07)[7-9]{1}[0-9]{7}$" ,ErrorMessage = "Invalid Phone Number")]
+        public string Phone { get; set; }
 
 
         [Range(18, 50)]
@@ -38,7 +38,7 @@ namespace Task_3_DataAnn.Models
 
 
         [Required(ErrorMessage = "The Gender field is required.")]
-        [RegularExpression("^(Male|Female)$", ErrorMessage = "Invalid Gender")]
-        public string Gender { get; set; } 
+        [RegularExpression("^(false|true)$", ErrorMessage = "Invalid Gender")]
+        public bool Gender { get; set; } 
     }
 }
