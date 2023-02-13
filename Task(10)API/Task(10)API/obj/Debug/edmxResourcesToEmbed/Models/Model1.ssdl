@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Faculties">
+    <Key>
+      <PropertyRef Name="ID_Fac" />
+    </Key>
+    <Property Name="ID_Fac" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Image" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Major">
+    <Key>
+      <PropertyRef Name="ID_Maj" />
+    </Key>
+    <Property Name="ID_Maj" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descrption" Type="varchar" MaxLength="225" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="MajorId" Type="int" />
+  </EntityType>
+  <Association Name="FK__Major__MajorId__7C4F7684">
+    <End Role="Faculties" Type="Self.Faculties" Multiplicity="0..1" />
+    <End Role="Major" Type="Self.Major" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Faculties">
+        <PropertyRef Name="ID_Fac" />
+      </Principal>
+      <Dependent Role="Major">
+        <PropertyRef Name="MajorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MVCModelStoreContainer">
+    <EntitySet Name="Faculties" EntityType="Self.Faculties" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Major" EntityType="Self.Major" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Major__MajorId__7C4F7684" Association="Self.FK__Major__MajorId__7C4F7684">
+      <End Role="Faculties" EntitySet="Faculties" />
+      <End Role="Major" EntitySet="Major" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
